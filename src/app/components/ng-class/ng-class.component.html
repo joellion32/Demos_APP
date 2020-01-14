@@ -1,0 +1,20 @@
+<div class="alert" [ngClass]="alerta">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ut voluptatem laborum doloremque, esse sapiente rerum numquam hic doloribus 
+    architecto quam autem quasi iure, quaerat temporibus enim harum. Soluta, libero.
+</div>
+
+
+<button class="btn btn-danger m-1" (click)="alerta = 'alert-danger'">
+    danger
+</button>
+
+<button class="btn btn-info m-1" (click)="alerta = 'alert-info'">
+    info
+</button>
+
+<h1>Proceso asincrono</h1>
+
+<button (click)="Cargar()" class="btn btn-primary" [disabled]="loading">
+<i class="fa" [ngClass]="{'fa-save': !loading, 'fa-refresh fa-spin':loading}"></i>  <span *ngIf="!loading">Guardar</span> 
+ <span *ngIf="loading">Guardando...</span>   
+</button>
